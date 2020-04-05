@@ -1,0 +1,1 @@
+/home/pouya/dotfiles/bash/.bashrc
