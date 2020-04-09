@@ -1,7 +1,7 @@
 #!/bin/bash
 
 dfvdir=$(pwd)
-#mkdir .vim
+mkdir ~/.vim
 
 #colorscheme
 mkdir colors
@@ -20,5 +20,6 @@ mkdir plugged
 ln -nsf $dfvdir/plugged ~/.vim/plugged
 ln -nsf $dfvdir/colors ~/.vim/colors
 ln -nsf $dfvdir/autoload ~/.vim/autoload 
+ln -nsf $dfvdir/.vimrc ~/.vimrc
 
 vim +'PlugInstall --sync' +qa
