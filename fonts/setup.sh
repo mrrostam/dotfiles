@@ -2,4 +2,4 @@
 
 dfdir=$(pwd)
 
-ln -nsf $dfdir/.fonts ~/.fonts 
+ln -nsf $dfdir/myfonts ~/.local/share/fonts 

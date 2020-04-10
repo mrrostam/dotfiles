@@ -1,0 +1,24 @@
+i3
+vim
+xorg-server
+xorg-xinit
+xorg-fonts-mics
+dmenu
+git
+firefox
+rxut-unicode
+zsh
+tmux
+wget
+htop
+curl
+mplayer
+alsa
+base-devel
+feh
+unrar
+unzip
+ moka-icon-theme
+ Picom
+ alacritty
+ i3blocks

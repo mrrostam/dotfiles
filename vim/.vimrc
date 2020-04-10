@@ -132,3 +132,4 @@ set lazyredraw          " redraw only when we need to.
 
 set modelines=1
 " vim:foldmethod=indent:foldlevel=0
+
