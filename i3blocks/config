@@ -1,0 +1,218 @@
+# i3blocks config file
+#
+# ================================================== 
+#   / __ \__  ______  ____ _____ ___  (_)  __
+#  / / / / / / / __ \/ __ `/ __ `__ \/ / |/_/
+# / /_/ / /_/ / / / / /_/ / / / / / / />  <  
+#/_____/\__, /_/ /_/\__,_/_/ /_/ /_/_/_/|_|  
+#      /____/                                
+# Filename:     i3blocks
+# Github:       https://github.com/mrrostam/dotfiles
+# Maintainer:   Pouya Rostam (Dynamix)
+# ================================================== 
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#command=$SCRIPT_DIR/$BLOCK_NAME
+#markup=none
+SCRIPT_DIR=~/.config/i3blocks
+separator=true
+separator_block_width=15
+
+#[documentation]
+#full_text=Documentation
+#website=https://vivien.github.io/i3blocks
+#command=xdg-open "$website"
+#color=#f12711
+
+#[click]
+#full_text=Click me!
+#command=echo "Got clicked with button $button"
+#color=#F79494
+
+#[greetings]
+#color=#f5af19
+#command=echo "Hi, $USER!"
+#interval=once
+
+# Battery indicator
+#
+# The battery instance defaults to 0.
+[battery2]
+command=battery2/battery2
+markup=pango
+interval=30
+
+[volume]
+command=volume/volume
+LABEL=♪
+LABEL=VOL
+interval=once
+signal=10
+STEP=5%
+#MIXER=[determined automatically]
+#SCONTROL=[determined automatically]
+
+[volume-pulseaudio]
+command=volume-pulseaudio/volume-pulseaudio
+interval=1
+signal=1
+#MIXER=[determined automatically]
+#SCONTROL=[determined automatically]
+##exposed format variables: ${SYMB}, ${VOL}, ${INDEX}, ${NAME}
+#LONG_FORMAT="${SYMB} ${VOL}% [${INDEX}:${NAME}]"
+#SHORT_FORMAT="${SYMB} ${VOL}% [${INDEX}]"
+#AUDIO_HIGH_SYMBOL='  '
+#AUDIO_MED_THRESH=50
+#AUDIO_MED_SYMBOL='  '
+#AUDIO_LOW_THRESH=0
+#AUDIO_LOW_SYMBOL='  '
+#AUDIO_DELTA=5
+#DEFAULT_COLOR="#ffffff"
+#MUTED_COLOR="#a0a0a0"
+#USE_ALSA_NAME=0
+#USE_DESCRIPTION=0
+## SUBSCRIBE=1 requires interval=persist and always uses LONG_FORMAT
+#SUBSCRIBE=0
+
+[memory]
+command=memory/memory
+label=MEM
+interval=30
+
+[memory]
+command=memory/memory
+label=SWAP
+instance=swap
+interval=30
+
+# Disk usage
+#
+# The directory defaults to $HOME if the instance is not specified.
+# The script may be called with a optional argument to set the alert
+# (defaults to 10 for 10%).
+[disk]
+command=disk/disk
+LABEL=HOME 
+DIR=/home/dynamix/
+#DIR=/mnt/data
+#ALERT_LOW=10
+interval=30
+
+# Network interface monitoring
+#
+# If the instance is not specified, use the interface used for default route.
+# The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
+[iface]
+command=iface/iface
+LABEL=wlan0:
+IFACE=wlp2s0
+ADDRESS_FAMILY=inet
+color=#00FF00
+interval=10
+
+[ssid]
+command=ssid/ssid
+INTERFACE=wlp2s0
+interval=60
+
+[wifi]
+command=wifi/wifi
+label=wifi:
+INTERFACE=wlp2s0
+interval=60
+
+[bandwidth]
+INTERFACE=eth0
+interval=5
+
+# CPU usage
+#
+# The script may be called with -w and -c switches to specify thresholds,
+# see the script for details.
+
+[cpu_usage]
+command=cpu_usage/cpu_usage
+interval=10
+LABEL=CPU 
+#min_width=CPU: 100.00%
+#T_WARN=50
+#T_CRIT=80
+#DECIMALS=2
+#separator=false
+[load_average]
+command=load_average/load_average
+interval=10
+label=LOAD
+
+# Date Time
+#
+[time]
+command=date '+%Y-%m-%d %H:%M'
+interval=30
+
+# Generic media player support
+#
+# This displays "ARTIST - SONG" if a music is playing.
+# Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
+[mediaplayer]
+command=mediaplayer/mediaplayer
+instance=spotify
+interval=5
+signal=10
+# OpenVPN support
+#
+# Support multiple VPN, with colors.
+#[openvpn]
+#interval=20
+
+# Temperature
+#
+# Support multiple chips, though lm-sensors.
+# The script may be called with -w and -c switches to specify thresholds,
+# see the script for details.
+[temperature]
+label=TEMP
+interval=10
+
+
+
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+# Change $SCRIPT_DIR to the location of your scripts!
+# Volume indicator
+#
+# The first parameter sets the step (and units to display)
+# The second parameter overrides the mixer selection
+# See the script for details.
+
+# Key indicators
+#
+# Add the following bindings to i3 config file:
+#
+# bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
+# bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
+#[keyindicator]
+#KEY=CAPS
+#markup=pango
+#interval=once
+#signal=11
