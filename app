@@ -22,3 +22,6 @@ unzip
  Picom
  alacritty
  i3blocks
+ stow
+ brightnessctl
+ polybar

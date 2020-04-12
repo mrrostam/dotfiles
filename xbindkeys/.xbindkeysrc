@@ -64,7 +64,11 @@
 ## Control + mouse button 2 release event starts rxvt
 #"rxvt"
 #  Control + b:2 + Release
-
+# Increase backlight
+#"brightnessctl set 100"
+#XF86MonBrightnessUp
+#"brightnessctl set 50"
+#XF86MonBrightnessDown
 ##################################
 # End of xbindkeys configuration #
 ##################################

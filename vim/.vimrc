@@ -28,6 +28,7 @@ filetype off                  " required
     Plug 'scrooloose/syntastic'
     Plug 'scrooloose/nerdcommenter'
     Plug 'lervag/vimtex'
+    Plug 'vim-scripts/AdvancedSorters'
     call plug#end()
     " set runtimepath^=~/.vim/bundle/nerdtree
     "set runtimepath^=~/.vim/bundle/vimtex

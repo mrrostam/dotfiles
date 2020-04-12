@@ -1,0 +1,24 @@
+! gorgeHousse
+! special
+*.foreground:   #CEDBE5
+*.background:   #0D0E16
+*.cursorColor:  #777F84
+*.fading:       35
+*.fadeColor:    #959EA5
+
+*.color0:       #0F1019
+*.color1:       #D83441
+*.color2:       #79D836
+*.color3:       #D8B941
+*.color4:       #3679D8
+*.color5:       #8041D8
+*.color6:       #36D8BD
+*.color7:       #959EA5
+*.color8:       #2D304C
+*.color9:       #FF7266
+*.color10:      #B2FF66
+*.color11:      #FFDF66
+*.color12:      #66A5FF
+*.color13:      #9866FF
+*.color14:      #66FFD8
+*.color15:      #E5F4FF
