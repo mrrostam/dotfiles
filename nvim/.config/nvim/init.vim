@@ -4,12 +4,11 @@
     " / /_/ / /_/ / / / / /_/ / / / / / / />  <  
     "/_____/\__, /_/ /_/\__,_/_/ /_/ /_/_/_/|_|  
     "      /____/                                
-    " Filename:     .vimrc
+    " Filename:     init.vim
     " Github:       https://github.com/mrrostam/dotfiles
     " Maintainer:   Pouya Rostam (Dynamix)
 "================================================== 
 
-set nocompatible		" Don't try to be vi compatible
 filetype off            " required
 
 "*****************************************************************************
@@ -18,44 +17,64 @@ filetype off            " required
     " Specify a directory for plugins
     " - For Neovim: stdpath('data') . '/plugged'
     " - Avoid using standard Vim directory names like 'plugin'
-    call plug#begin('~/.vim/plugged')
+    call plug#begin('~/.config/nvim/plugged')
+    " Make sure you use single quotes
+    " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+    " Plug 'junegunn/vim-easy-align'
+    " Any valid git URL is allowed
+    " Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+    " Multiple Plug commands can be written in a single line using | separators
+    " Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+    " On-demand loading
+    " Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+    " Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+    " Using a non-master branch
+    " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+    " Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
+    " Plug 'fatih/vim-go', { 'tag': '*' }
+    " Plugin options
+    " Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+    " Plugin outside ~/.vim/plugged with post-update hook
+    " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    " Unmanaged plugin (manually installed and updated)
+    " Plug '~/my-prototype-plugin'
+    " Initialize plugin system
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
-    Plug 'tpope/vim-fugitive'
-    Plug 'scrooloose/nerdtree'
-    Plug 'tpope/vim-surround'
-    Plug 'scrooloose/syntastic'
-    Plug 'scrooloose/nerdcommenter'
-    Plug 'lervag/vimtex'
-    Plug 'vim-scripts/AdvancedSorters'
-    Plug 'vim-airline/vim-airline-themes'
-    Plug 'vim-airline/vim-airline'
-    Plug 'junegunn/goyo.vim'
-    Plug 'junegunn/limelight.vim'
-    Plug 'lervag/vimtex'
-    Plug 'sbdchd/neoformat'
-    " Track the engine.
-    Plug 'SirVer/ultisnips'
-    " Snippets are separated from the engine. Add this if you want them:
-    Plug 'honza/vim-snippets'
-    if has('nvim')
-        Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    else
-        Plug 'Shougo/deoplete.nvim'
-        Plug 'roxma/nvim-yarp'
-        Plug 'roxma/vim-hug-neovim-rpc'
-    endif
+    " Plug 'tpope/vim-fugitive'
+    " Plug 'scrooloose/nerdtree'
+    " Plug 'tpope/vim-surround'
+     Plug 'scrooloose/syntastic'
+    " Plug 'scrooloose/nerdcommenter'
+     Plug 'lervag/vimtex'
+    " Plug 'vim-scripts/AdvancedSorters'
+     Plug 'vim-airline/vim-airline-themes'
+     Plug 'vim-airline/vim-airline'
+    " Plug 'junegunn/goyo.vim'
+    " Plug 'junegunn/limelight.vim'
+    " Plug 'sbdchd/neoformat'
+    " Plug 'Shougo/neosnippet.vim'
+    " Plug 'Shougo/neosnippet-snippets'
+    " Plug 'honza/vim-snippets'
+    " Plug 'deoplete-plugins/deoplete-jedi'
+    " if has('nvim')
+        " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    " else
+        " Plug 'Shougo/deoplete.nvim'
+        " Plug 'roxma/nvim-yarp'
+        " Plug 'roxma/vim-hug-neovim-rpc'
+    " endif
     " ==================== Themes  ===================="
         Plug 'morhetz/gruvbox'
         Plug 'arcticicestudio/nord-vim'
         Plug 'altercation/vim-colors-solarized'
         Plug 'dracula/vim', { 'as': 'dracula' }
         Plug 'chriskempson/base16-vim'
-        call plug#end()
-        filetype plugin indent on    " required
-        " set runtimepath^=~/.vim/bundle/nerdtree
-        "set runtimepath^=~/.vim/bundle/vimtex
+    call plug#end()
+    filetype plugin indent on    " required
+    " set runtimepath^=~/.vim/bundle/nerdtree
+    "set runtimepath^=~/.vim/bundle/vimtex
 
 "*****************************************************************************
 "" Basic Setup
@@ -176,20 +195,35 @@ filetype off            " required
     nnoremap <leader><space> :nohlsearch<CR>
     " save session
     nnoremap <leader>s :mksession<CR>
-
+    " Plugin key-mappings.
+    " " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+    " imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+    " smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+    " xmap <C-k>     <Plug>(neosnippet_expand_target)
 "*****************************************************************************
 "" Custom configs
 "*****************************************************************************
 " Color name (:help cterm-colors) or ANSI code
-let g:limelight_conceal_ctermfg = 'gray'
-let g:limelight_conceal_ctermfg = 240
+" let g:limelight_conceal_ctermfg = 'gray'
+" let g:limelight_conceal_ctermfg = 240
 
-let g:tex_flavor='latex'
-let g:vimtex_view_method='zathura'
-let g:vimtex_quickfix_mode=0
-set conceallevel=1
-let g:tex_conceal='abdmg'
-let g:deoplete#enable_at_startup = 1
+" let g:tex_flavor='latex'
+" let g:vimtex_view_method='zathura'
+" let g:vimtex_quickfix_mode=0
+" set conceallevel=1
+" let g:tex_conceal='abdmg'
+" Use deoplete.
+" let g:deoplete#enable_at_startup = 1
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsJumpForwardTrigger="<c-b>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+" let g:UltiSnipsEditSplit="vertical"
+" This is new style
+" call deoplete#custom#var('omni', 'input_patterns', {
+      " \ 'tex': g:vimtex#re#deoplete
+      " \})
 "*****************************************************************************
 "" Convenience variables
 "*****************************************************************************
@@ -201,4 +235,3 @@ set lazyredraw          " redraw only when we need to.
 
 set modelines=1
 " vim:foldmethod=indent:foldlevel=0
-

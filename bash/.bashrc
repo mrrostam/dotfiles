@@ -29,7 +29,7 @@ alias rm='rm -i'
 
 export EDITOR=vim
 export CLICOLOR=1
-export TERM=xterm-256color
+export TERM=rxvt-unicode-256color
 export HISTCONTROL=ignoreboth
 export HISTSIZE=1000
 export HISTFILESIZE=2000

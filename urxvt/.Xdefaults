@@ -9,43 +9,45 @@
 ! Maintainer:   Pouya Rostam (Dynamix)
 !================================================== 
 !! Colorscheme
+#define nord0 #2E3440
+#define nord1 #3B4252
+#define nord2 #434C5E
+#define nord3 #4C566A
+#define nord4 #D8DEE9
+#define nord5 #E5E9F0
+#define nord6 #ECEFF4
+#define nord7 #8FBCBB
+#define nord8 #88C0D0
+#define nord9 #81A1C1
+#define nord10 #5E81AC
+#define nord11 #BF616A
+#define nord12 #D08770
+#define nord13 #EBCB8B
+#define nord14 #A3BE8C
+#define nord15 #B48EAD
 
-! special
-*.foreground: #93a1a1
-*.background: #141c21
-*.cursorColor: #afbfbf
+*.foreground:   nord4
+*.background:   nord0
+*.cursorColor:  nord4
+!*.fading: 35
+!*.fadeColor: nord3
 
-! black
-*.color0: #263640
-*.color8: #4a697d
-
-! red
-*.color1: #d12f2c
-*.color9: #fa3935
-
-! green
-*.color2: #819400
-*.color10: #a4bd00
-
-! yellow
-*.color3: #b08500
-*.color11: #d9a400
-
-! blue
-*.color4: #2587cc
-*.color12: #2ca2f5
-
-! magenta
-*.color5: #696ebf
-*.color13: #8086e8
-
-! cyan
-*.color6: #289c93
-*.color14: #33c5ba
-
-! white
-*.color7: #bfbaac
-*.color15: #fdf6e3
+*.color0: nord1
+*.color1: nord11
+*.color2: nord14
+*.color3: nord13
+*.color4: nord9
+*.color5: nord15
+*.color6: nord8
+*.color7: nord5
+*.color8: nord3
+*.color9: nord11
+*.color10: nord14
+*.color11: nord13
+*.color12: nord9
+*.color13: nord15
+*.color14: nord7
+*.color15: nord6
 
 !! URxvt Appearance
 URxvt.font: xft:Source Code Pro:style=Regular:size=12
@@ -58,13 +60,14 @@ URxvt.lineSpace: 0
 !URxvt.internalBorder: 24
 URxvt.cursorBlink: true
 URxvt.cursorUnderline: false
-URxvt.saveline: 2048
 URxvt.scrollBar: false
 URxvt.scrollBar_right: false
 URxvt.urgentOnBell: true
-URxvt.depth: 24
+URxvt.depth: 32
 URxvt.iso14755: false
-
+!URxvt*background:                 black
+!URxvt*foreground:                 grey
+URxvt*saveLines:                  5000
 !! Common Keybinds for Navigations
 !URxvt.keysym.Shift-Up: command:\033]720;1\007
 !URxvt.keysym.Shift-Down: command:\033]721;1\007
@@ -85,3 +88,8 @@ URxvt.iso14755: false
 !URxvt.keysym.M-u: perl:url-select:select_next
 !URxvt.urlLauncher: firefox
 !URxvt.underlineURLs: true
+
+! for 'fake' transparency (without Compton) uncomment the following three lines
+!URxvt*inheritPixmap:            true
+!URxvt*transparent:              true
+!URxvt*shading:                  5 

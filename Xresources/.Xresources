@@ -1,44 +1,18 @@
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!!! XTerm settings !!!!!!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-XTerm*locale:     true
-XTerm*saveLines:  8192
-XTerm*faceName:   xft:Hack:size=12:antialias=true
+!#include "/home/dynamix/dotfiles/urxvt/nord"
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!!!! URxvt settings !!!!!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-URxvt.locale:           true
-URxvt.saveLines:        8192
-URxvt.perl-ext-common:  default,matcher,resize-font
-URxvt.scrollstyle:      plain
-URxvt.secondaryScroll:  true
+!-------------------------------------------------------------------------------
+! Rofi color theme
+!-------------------------------------------------------------------------------
 
-URxvt.url-launcher:     /usr/bin/xdg-open
-URxvt.matcher.button:   1
+! Enable the extended coloring options
+rofi.color-enabled: true
 
-URxvt.font:             xft:Hack:style=Light:size=10:antialias=true
-URxvt.keysym.C-Down:    resize-font:smaller
-URxvt.keysym.C-Up:      resize-font:bigger
+rofi.color-window: #2f343f, #e5e9f0, #2f343f
 
-URxvt.depth:            24
-URxvt.geometry:         100x40
-URxvt*internalBorder:   24
-URxvt*externalBorder:   0
-URxvt*scrollBar:        false
-URxvt*scrollBar_right:  false
-
-URxvt.visualBell: true
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!!! Emacs settings !!!!!!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-Emacs.menuBar:                       on
-Emacs.toolBar:                       off
-Emacs.verticalScrollBars:            off
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!!!!! Colorschemes !!!!!!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-#include ".themes/Xresources/gorgeHousse.theme"
+rofi.color-normal: #2f343f, #d8dee8, #2f343f, #2f343f, #ebcb8b
+rofi.color-active: #2f343f, #b48ead, #2f343f, #2f343f, #bf616a
+rofi.color-urgent: #2f343f, #ebcb8b, #2f343f, #2f343f, #93e5cc
+rofi.font: Fira Code 11
+rofi.bw: 3
+rofi.width: 30
+rofi.lines: 5

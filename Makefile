@@ -4,7 +4,11 @@ all: vim \
 	i3 \
 	bash \
 	urxvt \
-	fonts
+	alacritty \
+	tmux \
+	latex \
+	fonts \
+	wallpapers
 
 editor: vim nvim emacs
 
@@ -35,11 +39,12 @@ Xresources:
 
 vim: 
 	@echo "********** Vim setup **********"
+	mkdir -p ${HOME}/.config
 	stow -S vim -t ${HOME}
 
 nvim:
-	@echo "********** Vim setup **********"
-	stow -S vim -t ${HOME}
+	@echo "********** nVim setup **********"
+	stow -S nvim -t ${HOME}
 
 emacs:
 	@echo "********** Vim setup **********"
@@ -53,15 +58,36 @@ urxvt:
 	@echo "********** urxvt setup **********"
 	mkdir -p ${HOME}/.config
 	stow -S urxvt -t ${HOME}
+	xrdb .Xresources
+
+alacritty:
+	@echo "********** alacritty setup **********"
+	mkdir -p ${HOME}/.config
+	stow -S alacritty -t ${HOME}
 
 scripts:
 	@echo "********** scripts setup **********"
 	mkdir -p ${HOME}/.local
 	stow -S scripts -t ${HOME}
 
+tmux:
+	@echo "********** tmux setup **********"
+	mkdir -p ${HOME}/.config
+	stow -S tmux -t ${HOME}
+
+latex:
+	@echo "********** latex setup **********"
+	mkdir -p ${HOME}
+	stow -S latex -t ${HOME}
+
 fonts:
 	@echo "********** fonts setup **********"
 	stow -S fonts -t ${HOME}
+
+wallpapers:
+	@echo "********** wallpapers setup **********"
+	mkdir -p ${HOME}/wallpapers
+	stow -S wallpapers -t ${HOME}/Pictures
 
 ubuntu:
 
@@ -72,6 +98,7 @@ clean:
 	stow -D bash -t ${HOME}
 	stow -D urxvt -t ${HOME}
 	stow -D fonts -t ${HOME}
+	stow -D tmux -t ${HOME}
 
-.PHONY: vim i3 i3blocks i3status rofi scripts bash urxvt fonts\
+.PHONY: vim i3 i3blocks i3status rofi scripts nvim tmux bash urxvt alacritty latex fonts wallpapers\
 	clean

@@ -34,7 +34,7 @@
 # Global properties
 command=$SCRIPT_DIR/$BLOCK_NAME/$BLOCK_NAME
 separator=true
-separator_block_width=15
+separator_block_width=10
 #markup=none
 
 # This displays "ARTIST - SONG" if a music is playing.
@@ -61,11 +61,11 @@ signal=1
 ##exposed format variables: ${SYMB}, ${VOL}, ${INDEX}, ${NAME}
 #LONG_FORMAT="${SYMB} ${VOL}% [${INDEX}:${NAME}]"
 #SHORT_FORMAT="${SYMB} ${VOL}% [${INDEX}]"
-AUDIO_HIGH_SYMBOL='  '
+AUDIO_HIGH_SYMBOL=  
 AUDIO_MED_THRESH=50
-AUDIO_MED_SYMBOL='  '
+AUDIO_MED_SYMBOL=  
 AUDIO_LOW_THRESH=0
-AUDIO_LOW_SYMBOL='  '
+AUDIO_LOW_SYMBOL=  
 AUDIO_DELTA=5
 #DEFAULT_COLOR="#ffffff"
 MUTED_COLOR="#a0a0a0"
@@ -75,63 +75,64 @@ MUTED_COLOR="#a0a0a0"
 #SUBSCRIBE=0
 
 [disk]
-label=
+label= 
 #LABEL=HOME 
 DIR=/home/dynamix/
 ALERT_LOW=10
 interval=30
 
 [memory]
-label=MEM
+label= 
 interval=30
+#separator=false
 
-[memory]
-label=SWAP
-instance=swap
-interval=30
+#[memory]
+#label=SWAP
+#instance=swap
+#interval=30
 
 [load_average]
-interval=10
-label=LOAD
+interval=30
+#label=LOAD
+label=  
+separator=false
 
 [cpu_usage]
-label=
-interval=10
+interval=30
 T_WARN=50
 T_CRIT=80
 DECIMALS=2
 separator=false
 
 [temperature]
-interval=1
+interval=30
 
 [battery2]
 markup=pango
-interval=1
-separator=false
+interval=30
 
-[brightness]
-command=brightnessctl g 
-label=
-signal=12
-interval=1
+#[brightness]
+#command=brightnessctl g 
+#label=
+#signal=12
+#interval=30
 
 [wifi]
-label=
+label= 
 instance=wlp2s0
 separator=false
 interval=30
 
 [ssid]
 INTERFACE=wlp2s0
-interval=60
+interval=30
 
 [iface]
 #LABEL=wlan0:
-IFACE=wlp2s0
-ADDRESS_FAMILY=inet
-color=#00FF00
-interval=10
+#IFACE=wlp2s0
+#ADDRESS_FAMILY=inet
+#color=#00FF00
+#interval=10
 
 [time]
 label=
@@ -141,8 +142,8 @@ interval=30
 
 [time]
 #label=
-command=date "+%H:%M:%S "
-interval=1
+command=date "+%H:%M "
+interval=30
 
 #[documentation]
 #full_text=Documentation
