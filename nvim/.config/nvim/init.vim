@@ -42,40 +42,69 @@ filetype off            " required
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
+    " Plug 'terryma/vim-multiple-cursors'
     " Plug 'tpope/vim-fugitive'
+    " Plug 'majutsushi/tagbar'
+    " Plug 'valloric/youcompleteme'
+    " Plug 'mattn/emmet-vim'
+    " Plug 'tpope/vim-commentary'
+    " Plug 'w0rp/ale'
+    " Plug 'godlygeek/tabular'
+    " Plug 'ervandew/supertab'
+    " Plug 'junegunn/fzf'
+    " Plug 'easymotion/vim-easymotion'
+    " Plug 'terryma/vim-multiple-cursors'
     " Plug 'scrooloose/nerdtree'
     " Plug 'tpope/vim-surround'
-     Plug 'scrooloose/syntastic'
-    " Plug 'scrooloose/nerdcommenter'
-     Plug 'lervag/vimtex'
     " Plug 'vim-scripts/AdvancedSorters'
-     Plug 'vim-airline/vim-airline-themes'
-     Plug 'vim-airline/vim-airline'
     " Plug 'junegunn/goyo.vim'
     " Plug 'junegunn/limelight.vim'
     " Plug 'sbdchd/neoformat'
-    " Plug 'Shougo/neosnippet.vim'
-    " Plug 'Shougo/neosnippet-snippets'
     " Plug 'honza/vim-snippets'
     " Plug 'deoplete-plugins/deoplete-jedi'
-    " if has('nvim')
-        " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    " else
-        " Plug 'Shougo/deoplete.nvim'
-        " Plug 'roxma/nvim-yarp'
-        " Plug 'roxma/vim-hug-neovim-rpc'
-    " endif
+    Plug 'lervag/vimtex'
+    Plug 'scrooloose/syntastic'
+    Plug 'scrooloose/nerdcommenter'
+    if has('nvim')
+        Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }   " Dark powered asynchronous completion framework 
+    else
+        Plug 'Shougo/deoplete.nvim'
+        Plug 'roxma/nvim-yarp'
+        Plug 'roxma/vim-hug-neovim-rpc'
+    endif
+    Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
+    " Plug 'Shougo/neosnippet.vim'
+    " Plug 'Shougo/neosnippet-snippets'
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'vim-airline/vim-airline'
     " ==================== Themes  ===================="
-        Plug 'morhetz/gruvbox'
-        Plug 'arcticicestudio/nord-vim'
-        Plug 'altercation/vim-colors-solarized'
-        Plug 'dracula/vim', { 'as': 'dracula' }
-        Plug 'chriskempson/base16-vim'
+    Plug 'morhetz/gruvbox'
+    Plug 'arcticicestudio/nord-vim'
+    Plug 'altercation/vim-colors-solarized'
+    Plug 'dracula/vim', { 'as': 'dracula' }
+    Plug 'chriskempson/base16-vim'
     call plug#end()
     filetype plugin indent on    " required
-    " set runtimepath^=~/.vim/bundle/nerdtree
-    "set runtimepath^=~/.vim/bundle/vimtex
 
+"*****************************************************************************
+"" Plugin configuration
+"*****************************************************************************
+    let g:tex_flavor='latex'
+    let g:vimtex_view_method='zathura'
+    let g:vimtex_quickfix_mode=0
+    set conceallevel=1
+
+    " let g:neosnippet#snippets_directory='~/.config/nvim/snippets'
+    let g:deoplete#enable_at_startup = 1
+    let g:UltiSnipsExpandTrigger="<tab>"
+    let g:UltiSnipsJumpForwardTrigger = '<tab>'
+    let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+
+    let g:airline_theme='nord'
+    let g:airline#extensions#syntastic#enabled = 1
+    let g:airline#extensions#whitespace#enabled = 0
+    let g:airline#extensions#tabline#enabled = 1
 "*****************************************************************************
 "" Basic Setup
 "*****************************************************************************
@@ -115,6 +144,7 @@ filetype off            " required
 "" Visual Settings
 "*****************************************************************************
     syntax on                           " Turn on syntax highlighting
+    set omnifunc=syntaxcomplete#Complete
     set number relativenumber			" Show line numbers
     set ruler                           " Show file stats
     "set rulerformat=%-14.(%l,%c%V%)\ %P
@@ -126,20 +156,17 @@ filetype off            " required
     set showmode                        " display the current mode
     "color solarized                     " load a colorscheme
     "color gruvbox
-    let g:airline_theme='nord'
-    let g:airline#extensions#syntastic#enabled = 1
-    let g:airline#extensions#whitespace#enabled = 0
-    let g:airline#extensions#tabline#enabled = 1
+
     colorscheme nord
     set background=dark
     let g:airline_powerline_fonts = 1
-    let g:airline_left_sep=''
-    let g:airline_right_sep=''
+    " let g:airline_left_sep=''
+    " let g:airline_right_sep=''
     
     " air-line
-    if !exists('g:airline_symbols')
-        let g:airline_symbols = {}
-    endif
+    " if !exists('g:airline_symbols')
+        " let g:airline_symbols = {}
+    " endif
 
     " unicode symbols
         "let g:airline_left_sep = '»'
@@ -207,10 +234,8 @@ filetype off            " required
 " let g:limelight_conceal_ctermfg = 'gray'
 " let g:limelight_conceal_ctermfg = 240
 
-" let g:tex_flavor='latex'
-" let g:vimtex_view_method='zathura'
-" let g:vimtex_quickfix_mode=0
-" set conceallevel=1
+
+" It should be:
 " let g:tex_conceal='abdmg'
 " Use deoplete.
 " let g:deoplete#enable_at_startup = 1

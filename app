@@ -25,3 +25,6 @@ unzip
  stow
  brightnessctl
  polybar
+
+tlp
+ytop
