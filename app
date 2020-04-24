@@ -28,4 +28,4 @@ unzip
  ytop
  nvim
  cmus
-
+tlp
