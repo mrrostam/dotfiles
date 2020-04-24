@@ -46,7 +46,7 @@ filetype off            " required
     " Plug 'scrooloose/nerdtree'
     " Plug 'tpope/vim-surround'
      Plug 'scrooloose/syntastic'
-    " Plug 'scrooloose/nerdcommenter'
+     Plug 'scrooloose/nerdcommenter'
      Plug 'lervag/vimtex'
     " Plug 'vim-scripts/AdvancedSorters'
      Plug 'vim-airline/vim-airline-themes'
@@ -55,16 +55,16 @@ filetype off            " required
     " Plug 'junegunn/limelight.vim'
     " Plug 'sbdchd/neoformat'
     " Plug 'Shougo/neosnippet.vim'
-    " Plug 'Shougo/neosnippet-snippets'
+     Plug 'Shougo/neosnippet-snippets'
     " Plug 'honza/vim-snippets'
     " Plug 'deoplete-plugins/deoplete-jedi'
-    " if has('nvim')
-        " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    " else
-        " Plug 'Shougo/deoplete.nvim'
-        " Plug 'roxma/nvim-yarp'
-        " Plug 'roxma/vim-hug-neovim-rpc'
-    " endif
+     if has('nvim')
+         Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+     else
+         Plug 'Shougo/deoplete.nvim'
+         Plug 'roxma/nvim-yarp'
+         Plug 'roxma/vim-hug-neovim-rpc'
+     endif
     " ==================== Themes  ===================="
         Plug 'morhetz/gruvbox'
         Plug 'arcticicestudio/nord-vim'
@@ -207,8 +207,11 @@ filetype off            " required
 " let g:limelight_conceal_ctermfg = 'gray'
 " let g:limelight_conceal_ctermfg = 240
 
-" let g:tex_flavor='latex'
-" let g:vimtex_view_method='zathura'
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_compiler_latexmk = {
+    \ 'build_dir' : 'build',
+    \}
 " let g:vimtex_quickfix_mode=0
 " set conceallevel=1
 " let g:tex_conceal='abdmg'
