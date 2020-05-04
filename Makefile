@@ -2,6 +2,7 @@ all: vim \
 	nvim \
 	emacs \
 	i3 \
+	openbox \
 	bash \
 	urxvt \
 	alacritty \
@@ -16,6 +17,11 @@ i3: i3blocks i3status rofi
 	@echo "********** i3 setup **********"
 	mkdir -p ${HOME}/.config
 	stow -S i3 -t ${HOME}
+
+openbox: 
+	@echo "********** openbox setup **********"
+	mkdir -p ${HOME}/.config
+	stow -S openbox -t ${HOME}
 
 i3blocks: scripts 
 	@echo "********** i3blocks setup **********"
@@ -100,5 +106,5 @@ clean:
 	stow -D fonts -t ${HOME}
 	stow -D tmux -t ${HOME}
 
-.PHONY: vim i3 i3blocks i3status rofi scripts nvim tmux bash urxvt alacritty latex fonts wallpapers\
+.PHONY: vim i3 openbox i3blocks i3status rofi scripts nvim tmux bash urxvt alacritty latex fonts wallpapers\
 	clean
