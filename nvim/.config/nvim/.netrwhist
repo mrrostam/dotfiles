@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/dynamix/Miskatonic-Project/modules'
+let g:netrw_dirhist_4='/home/dynamix/mrrostam.github.io/_pages'
+let g:netrw_dirhist_3='/home/dynamix/mrrostam.github.io'
+let g:netrw_dirhist_2='/home/dynamix/dotfiles/nvim/.config/nvim/plugged/vim-snippets/snippets'
+let g:netrw_dirhist_1='/home/dynamix/dotfiles/nvim/.config/nvim/plugged/vim-snippets'
+let g:netrw_dirhist_0='/home/dynamix/dotfiles/nvim/.config/nvim/plugged'
+let g:netrw_dirhist_9='/home/dynamix/dotfiles/nvim/.config/nvim/plugged/ultisnips'
+let g:netrw_dirhist_8='/home/dynamix/dotfiles/nvim/.config/nvim/plugged'
+let g:netrw_dirhist_7='/home/dynamix/dotfiles/nvim/.config/nvim'
+let g:netrw_dirhist_6='/home/dynamix/dotfiles/nvim/.config'

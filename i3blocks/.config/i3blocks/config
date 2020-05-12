@@ -99,7 +99,7 @@ separator=false
 
 [cpu_usage]
 interval=30
-T_WARN=50
+T_WARN=60
 T_CRIT=80
 DECIMALS=2
 separator=false
@@ -119,12 +119,12 @@ interval=30
 
 [wifi]
 label= 
-instance=wlp2s0
+instance=wlp3s0
 separator=false
 interval=30
 
 [ssid]
-INTERFACE=wlp2s0
+INTERFACE=wlp3s0
 interval=30
 
 [iface]

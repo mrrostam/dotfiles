@@ -1,0 +1,40 @@
+snippet std "use namespace std" b
+using namespace std;
+endsnippet
+
+snippet class "class" b
+class ${1:Class}{
+	public:
+	// constructors, asssignment, destructor
+	$1();
+	$1(const $1&);
+	$1& operator=(const $1&);
+	~$1();
+	private:
+	};
+endsnippet
+
+snippet fun "function definition" b
+${2:void} ${1:name}($3){
+	$4
+}
+endsnippet
+
+snippet funv "visual function def" b
+${2:void} ${1:name}($3){
+	${4:${VISUAL}}      // <--- visual placeholder added
+	}
+endsnippet
+
+global !p
+def list_files():
+    files = []
+    for f in os.listdir('.'):
+        if f.endswith(('.cpp', '.h', '.cc')) and not f.startswith('.'):
+            files.append(f)
+    return ' '.join(files)
+endglobal
+
+snippet ls "list source files" iw
+`!p snip.rv = list_files()`     // snip.rv means "snip return value"
+endsnippet

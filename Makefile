@@ -86,7 +86,6 @@ fonts:
 
 wallpapers:
 	@echo "********** wallpapers setup **********"
-	mkdir -p ${HOME}/wallpapers
 	stow -S wallpapers -t ${HOME}/Pictures
 
 ubuntu:
