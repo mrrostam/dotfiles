@@ -60,6 +60,9 @@ filetype off            " required
     " Plug 'junegunn/goyo.vim'
     " Plug 'junegunn/limelight.vim'
     " Plug 'sbdchd/neoformat'
+    " Plug 'Shougo/neosnippet.vim'
+    " Plug 'honza/vim-snippets'
+    " Plug 'deoplete-plugins/deoplete-jedi'
     " Plug 'honza/vim-snippets'
     " Plug 'deoplete-plugins/deoplete-jedi'
     Plug 'lervag/vimtex'                    " A modern vim plugin for editing LaTeX files.
@@ -81,6 +84,10 @@ filetype off            " required
     endif
     Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
     " Plug 'Shougo/neosnippet-snippets' | Plug 'Shougo/neosnippet.vim'
+    " Plug 'Shougo/neosnippet.vim'
+    " Plug 'Shougo/neosnippet-snippets'
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'vim-airline/vim-airline'
     " ==================== Themes  ===================="
     Plug 'morhetz/gruvbox'
     Plug 'arcticicestudio/nord-vim'
@@ -242,6 +249,8 @@ filetype off            " required
 " let g:limelight_conceal_ctermfg = 'gray'
 " let g:limelight_conceal_ctermfg = 240
 
+" let g:vimtex_quickfix_mode=0
+" set conceallevel=1
 
 " It should be:
 " let g:tex_conceal='abdmg'

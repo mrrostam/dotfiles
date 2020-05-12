@@ -25,6 +25,7 @@ unzip
  stow
  brightnessctl
  polybar
-
+ ytop
+ nvim
+ cmus
 tlp
-ytop
