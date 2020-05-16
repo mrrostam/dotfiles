@@ -44,14 +44,11 @@ filetype off            " required
 "*****************************************************************************
     " Plug 'terryma/vim-multiple-cursors'
     " Plug 'tpope/vim-fugitive'
-    " Plug 'majutsushi/tagbar'
-    " Plug 'valloric/youcompleteme'
     " Plug 'mattn/emmet-vim'
     " Plug 'tpope/vim-commentary'
     " Plug 'w0rp/ale'
     " Plug 'godlygeek/tabular'
     " Plug 'ervandew/supertab'
-    " Plug 'junegunn/fzf'
     " Plug 'easymotion/vim-easymotion'
     " Plug 'terryma/vim-multiple-cursors'
     " Plug 'scrooloose/nerdtree'
@@ -60,11 +57,11 @@ filetype off            " required
     " Plug 'junegunn/goyo.vim'
     " Plug 'junegunn/limelight.vim'
     " Plug 'sbdchd/neoformat'
-    " Plug 'Shougo/neosnippet.vim'
-    " Plug 'honza/vim-snippets'
-    " Plug 'deoplete-plugins/deoplete-jedi'
-    " Plug 'honza/vim-snippets'
-    " Plug 'deoplete-plugins/deoplete-jedi'
+    Plug 'godlygeek/tabular'
+    Plug 'tpope/vim-commentary'
+    Plug 'scrooloose/nerdtree'
+    Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-unimpaired'
     Plug 'lervag/vimtex'                    " A modern vim plugin for editing LaTeX files.
     Plug 'scrooloose/syntastic'             " Syntax checking hacks for vim
     Plug 'scrooloose/nerdcommenter'         " Vim plugin for intensely nerdy commenting powers
@@ -119,6 +116,8 @@ filetype off            " required
     let g:airline#extensions#whitespace#enabled = 0
     let g:airline#extensions#tabline#enabled = 1
     let g:airline_powerline_fonts = 1
+
+    set rtp+=~/current_course
     " let g:airline_left_sep=''
     " let g:airline_right_sep=''
     
