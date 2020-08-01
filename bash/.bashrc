@@ -19,20 +19,26 @@ alias l='ls -CF'
 alias ll='ls -alF'
 alias la='ls -A'
 alias ls='ls --color=auto'
+alias dir='ls -l'
+
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias grep='grep --color=auto'
+
 alias ..='cd ..'
+alias +='pushd .'
+alias -='popd'
+
 #alias mv='mv -i'
 #alias rm='rm -i'
 
-export EDITOR=vim
-export CLICOLOR=1
-export TERM=rxvt-unicode-256color
-export HISTCONTROL=ignoreboth
-export HISTSIZE=1000
-export HISTFILESIZE=2000
+#export EDITOR=vim
+#export CLICOLOR=1
+#export TERM=rxvt-unicode-256color
+#export HISTCONTROL=ignoreboth
+#export HISTSIZE=1000
+#export HISTFILESIZE=2000
 
 #PS1='[\u@\h \W]\$ '
 

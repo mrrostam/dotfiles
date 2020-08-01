@@ -1,0 +1,11 @@
+pane	0	0	:bash	1	:*	0	:/home/dynamix	1	bash	:
+pane	1	0	:bash	0	:	0	:/home/dynamix	1	bash	:
+pane	1	1	:bash	0	:-	0	:/home/dynamix	1	bash	:
+pane	1	2	:bash	1	:*	0	:/home/dynamix	0	bash	:
+pane	1	2	:bash	1	:*	1	:/home/dynamix	0	bash	:
+pane	1	2	:bash	1	:*	2	:/home/dynamix	1	bash	:
+window	0	0	1	:*	aedd,81x23,0,0,0
+window	1	0	0	:	aede,81x23,0,0,1
+window	1	1	0	:-	aedf,81x23,0,0,2
+window	1	2	1	:*	0039,81x23,0,0{40x23,0,0,3,40x23,41,0[40x11,41,0,4,40x11,41,12,5]}
+state	1	

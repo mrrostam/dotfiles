@@ -1,10 +1,12 @@
 configuration {
         modi: "window,run,ssh,combi";
-        combi-modi: "window,drun";
-        font: "Hack 12";
+        /*combi-modi: "window,drun";*/
+        /*font: "Hack 12";*/
         terminal: "alacritty";
-        theme: "gorgeHousse";
-
+        /*theme: "gorgeHousse";*/
+		theme: "nord";
+		show-icons: true;
+		icon-theme: "paper";
 /*      width: 50;*/
 /*      lines: 15;*/
 /*      columns: 1;*/

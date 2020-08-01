@@ -3,6 +3,7 @@ all: vim \
 	emacs \
 	i3 \
 	openbox \
+	conky \
 	bash \
 	urxvt \
 	alacritty \
@@ -81,6 +82,11 @@ tmux:
 	mkdir -p ${HOME}/.config
 	stow -S tmux -t ${HOME}
 
+conky:
+	@echo "********** conky setup **********"
+	mkdir -p ${HOME}/.config
+	stow -S conky -t ${HOME}
+
 latex:
 	@echo "********** latex setup **********"
 	mkdir -p ${HOME}
@@ -105,5 +111,5 @@ clean:
 	stow -D fonts -t ${HOME}
 	stow -D tmux -t ${HOME}
 
-.PHONY: vim i3 openbox i3blocks i3status rofi scripts nvim tmux bash urxvt alacritty latex fonts wallpapers\
+.PHONY: vim conky i3 openbox i3blocks i3status rofi scripts nvim tmux bash urxvt alacritty latex fonts wallpapers\
 	clean

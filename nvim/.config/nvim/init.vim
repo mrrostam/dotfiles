@@ -57,6 +57,10 @@ filetype off            " required
     " Plug 'junegunn/goyo.vim'
     " Plug 'junegunn/limelight.vim'
     " Plug 'sbdchd/neoformat'
+" Better manage Vim sessions.
+" Plug 'tpope/vim-obsession'
+    Plug 'dhruvasagar/vim-zoom'             " Zoom in and out of a specific split pane (similar to tmux).
+    Plug 'francoiscabrol/ranger.vim'        " Launch Ranger from Vim.
     Plug 'godlygeek/tabular'
     Plug 'tpope/vim-commentary'
     Plug 'scrooloose/nerdtree'
@@ -151,6 +155,7 @@ filetype off            " required
 "*****************************************************************************
 "" Basic Setup
 "*****************************************************************************
+    set completeopt=menuone,longest
     set clipboard=unnamedplus
     set hidden
     set mouse=a                         " automatically enable mouse usage
@@ -187,7 +192,17 @@ filetype off            " required
 "*****************************************************************************
 "" Visual Settings
 "*****************************************************************************
+" Enable 24-bit true colors if your terminal supports it.
+"if (has("termguicolors"))
+     "https://github.com/vim/vim/issues/993#issuecomment-255651605
+    "let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    "let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+    "set termguicolors
+"endif
+
     syntax on                           " Turn on syntax highlighting
+
     set omnifunc=syntaxcomplete#Complete
     set number relativenumber			" Show line numbers
     set ruler                           " Show file stats
@@ -195,7 +210,7 @@ filetype off            " required
     set mousemodel=popup
     set cursorline                      " highlight current line
     " hi cursorline guibg=\#333333      " highlight bg color of current line
-    " hi CursorColumn guibg=\#333333    " highlight cursor
+    " hi CursorColu`mn guibg=\#333333    " highlight cursor
     set showmatch                       " highlight matching [{()}]
     set showmode                        " display the current mode
     "color solarized                     " load a colorscheme

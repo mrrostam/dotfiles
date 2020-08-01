@@ -1,5 +1,5 @@
 # ================================================== 
-#"   / __ \__  ______  ____ _____ ___  (_)  __
+
 #"  / / / / / / / __ \/ __ `/ __ `__ \/ / |/_/
 #" / /_/ / /_/ / / / / /_/ / / / / / / />  <  
 #"/_____/\__, /_/ /_/\__,_/_/ /_/ /_/_/_/|_|  
@@ -99,41 +99,41 @@
   #multiplier: 3
 
 # Font configuration
-#font:
+font:
   # Normal (roman) font face
-  #normal:
+  normal:
     # Font family
     #
     # Default:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    #family: monospace
+    family: Source Code Pro
 
     # The `style` can be specified to pick a specific face.
-    #style: Regular
+    style: Regular
 
   # Bold font face
-  #bold:
-    # Font family
+  bold:
+    #Font family
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: monospace
+    family: Source Code Pro
 
     # The `style` can be specified to pick a specific face.
-    #style: Bold
+    style: Bold
 
   # Italic font face
-  #italic:
+  italic:
     # Font family
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: monospace
+    family: Source Code Pro
 
     # The `style` can be specified to pick a specific face.
-    #style: Italic
+    style: Italic
 
   # Bold italic font face
   #bold_italic:
@@ -147,7 +147,7 @@
     #style: Bold Italic
 
   # Point size
-  #size: 11.0
+  size: 8.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
