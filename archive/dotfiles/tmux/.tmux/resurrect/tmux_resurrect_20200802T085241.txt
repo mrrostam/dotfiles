@@ -1,0 +1,15 @@
+pane	ws	0	:cmd	0	:	0	:/home/dynamix	1	bash	:
+pane	ws	0	:cmd	0	:	1	:/home/dynamix	0	bash	:
+pane	ws	0	:cmd	0	:	2	:/home/dynamix	0	bash	:
+pane	ws	1	:files	0	:-	0	:/	1	python	:/usr/bin/python -O /usr/bin/ranger
+pane	ws	2	:browser	0	:	0	:/home/dynamix	1	elinks	:elinks
+pane	ws	3	:website	1	:*	0	:/home/dynamix/Projects/mrrostam.github.io	0	python	:/usr/bin/python -O /usr/bin/ranger
+pane	ws	3	:website	1	:*	1	:/home/dynamix	1	bash	:
+pane	ws	3	:website	1	:*	2	:/home/dynamix/Projects/mrrostam.github.io	0	jekyll	:/usr/bin/jekyll liveserve
+pane	ws	4	:music	0	:	0	:/home/dynamix	1	bash	:
+window	ws	0	0	:	d458,190x49,0,0{95x49,0,0,0,94x49,96,0[94x25,96,0,5,94x23,96,26,6]}
+window	ws	1	0	:-	d0be,190x49,0,0,1
+window	ws	2	0	:	d0bf,190x49,0,0,2
+window	ws	3	1	:*	0c0f,190x49,0,0{95x49,0,0,3,94x49,96,0[94x25,96,0,8,94x23,96,26,10]}
+window	ws	4	0	:	6890,190x49,0,0,11
+state	ws	
