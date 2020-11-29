@@ -29,7 +29,7 @@ set secure
    " ==================== packages ===================="
         Plug 'junegunn/fzf'
         Plug 'scrooloose/nerdtree'
-
+        Plug 'chriskempson/base16-vim'
    " ==================== themes ===================="
         Plug 'arcticicestudio/nord-vim'
         Plug 'dracula/vim', { 'as': 'dracula' }
@@ -40,10 +40,11 @@ set secure
 "*****************************************************************************
 "" Basic Setup
 "*****************************************************************************
-    set clipboard=unnamedplus       " Using the clipboard as the default register
-    set hidden
+    set clipboard=unnamedplus       " using the clipboard as the default register
+    set hidden                      " hide buffers
     set mouse=a                     " automatically enable mouse usage
     set history=1000                " Store a ton of history (defaul is 20)
+    set path+=**                    " vim kind-of fuzzy finder
     " set spell                     " spell checking on
     set spelllang=en_us,en_ca
     set spellfile=~/.vim/spell/en.utf-8.add
@@ -79,9 +80,11 @@ set secure
     set number relativenumber           " Show line numbers
     set cursorline                      " highlight current line
     " =================== theme ==================== " 
-    colorscheme gruvbox
-    set background=dark
-    set t_Co=256                        " for tmux
+    " colorscheme gruvbox
+    colorscheme base16-tomorrow-night
+    " set background=dark
+    " set termguicolors
+    " set t_Co=256                        " for tmux
     " ==================== folding ==================== "
     set foldenable                      " enable folding
     set foldlevelstart=10               " open most folds by default
