@@ -24,18 +24,19 @@ set secure
       autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
     endif
 
-    call plug#begin('~/.config/vim/plugged')
-
-   " ==================== packages ===================="
-        Plug 'junegunn/fzf'
-        Plug 'scrooloose/nerdtree'
-        Plug 'chriskempson/base16-vim'
-   " ==================== themes ===================="
-        Plug 'arcticicestudio/nord-vim'
-        Plug 'dracula/vim', { 'as': 'dracula' }
-        Plug 'morhetz/gruvbox'
-        call plug#end()
-        filetype plugin indent on    " required
+    call plug#begin('~/.vim/plugged')
+    " ==================== packages ===================="
+    Plug 'hdima/python-syntax'
+    Plug 'junegunn/fzf'
+    Plug 'scrooloose/nerdtree'
+    Plug 'vim-scripts/c.vim'
+    " ==================== themes ===================="
+    Plug 'arcticicestudio/nord-vim'
+    Plug 'chriskempson/base16-vim'
+    Plug 'dracula/vim', { 'as': 'dracula' }
+    Plug 'morhetz/gruvbox'
+    call plug#end()
+    filetype plugin indent on    " required
 
 "*****************************************************************************
 "" Basic Setup
@@ -80,11 +81,11 @@ set secure
     set number relativenumber           " Show line numbers
     set cursorline                      " highlight current line
     " =================== theme ==================== " 
-    " colorscheme gruvbox
-    colorscheme base16-tomorrow-night
-    " set background=dark
+    " colorscheme base16-tomorrow-night
     " set termguicolors
-    " set t_Co=256                        " for tmux
+    colorscheme gruvbox
+    set background=dark
+    set t_Co=256                        " for tmux
     " ==================== folding ==================== "
     set foldenable                      " enable folding
     set foldlevelstart=10               " open most folds by default
