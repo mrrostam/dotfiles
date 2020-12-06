@@ -29,6 +29,7 @@ set secure
     Plug 'hdima/python-syntax'
     Plug 'junegunn/fzf'
     Plug 'scrooloose/nerdtree'
+    Plug 'tpope/vim-commentary'
     Plug 'vim-scripts/c.vim'
     " ==================== themes ===================="
     Plug 'arcticicestudio/nord-vim'
