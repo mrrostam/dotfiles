@@ -18,6 +18,10 @@ xfce:
 	@echo "********** xfce setup **********"
 	stow -S xfce -t ${HOME}/.config
 
+fonts:
+	@echo "********** fonts setup **********"
+	stow -S fonts -t ${HOME}
+
 ubuntu:
 
 arch:
