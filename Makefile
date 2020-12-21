@@ -10,6 +10,10 @@ vim:
 	@echo "********** Vim setup **********"
 	stow -S vim -t ${HOME}
 
+urxvt: 
+	@echo "********** urxvt setup **********"
+	stow -S urxvt -t ${HOME}
+
 xorg: 
 	@echo "********** xorg setup **********"
 	stow -S x11 -t ${HOME}
@@ -29,4 +33,4 @@ arch:
 clean:
 	stow -D vim -t ${HOME}
 
-.PHONY: vim bash xorg xfce
+.PHONY: vim bash xorg xfce urxvt
