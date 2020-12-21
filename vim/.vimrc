@@ -31,6 +31,7 @@ set secure
     Plug 'scrooloose/nerdtree'
     Plug 'tpope/vim-commentary'
     Plug 'vim-scripts/c.vim'
+    Plug 'scrooloose/syntastic'
     " ==================== themes ===================="
     Plug 'arcticicestudio/nord-vim'
     Plug 'chriskempson/base16-vim'
@@ -110,7 +111,7 @@ set secure
 "*****************************************************************************
 "" Custom configs
 "*****************************************************************************
-
+    let g:mapleader = ' '
 "*****************************************************************************
 "" Convenience variables
 "*****************************************************************************

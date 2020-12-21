@@ -1,4 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
-let g:netrw_dirhist_2='/home/dynamix/dotfiles/nvim/.config/nvim/plugged/vimtex'
-let g:netrw_dirhist_1='/home/dynamix/Downloads/latex'

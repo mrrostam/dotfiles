@@ -1,8 +1,0 @@
-pane	0	0	:bash	1	:*	0	:/home/dynamix	1	bash	:
-pane	2	0	:bash	1	:*	0	:/home/dynamix	1	bash	:
-pane	5	0	:python	1	:*	0	:/home/dynamix	0	bash	:
-pane	5	0	:python	1	:*	1	:/home/dynamix/Projects/mrrostam.github.io	1	bash	:
-window	0	0	1	:*	c49d,94x47,0,0,0
-window	2	0	1	:*	aee3,81x23,0,0,6
-window	5	0	1	:*	4987,191x50,0,0{95x50,0,0,13,95x50,96,0,14}
-state	5	
