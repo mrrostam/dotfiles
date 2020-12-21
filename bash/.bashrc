@@ -13,27 +13,32 @@
 [[ $- != *i* ]] && return
 
 #=========================================================
-# Terminal Color Codes
+# Customizatons
 #=========================================================
-    alias l='ls -CF'
-    alias ll='ls -alF'
-    alias la='ls -A'
-    alias ls='ls --color=auto'
+    # aliases
     alias dir='ls -l'
+    alias l='ls -CF'
+    alias la='ls -A'
+    alias ll='ls -alF'
+    alias ls='ls --color=auto'
+    alias ls='ls --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
     alias grep='grep --color=auto'
 
-    #alias ..='cd ..'
+    alias ..='cd ..'
     #alias +='pushd .'
     #alias -='popd'
 
+    alias swapcaps='setxkbmap -option "ctrl:swapcaps"'
+    alias vi='vim'
     #alias mv='mv -i'
     #alias rm='rm -i'
 
-    #export EDITOR=vim
+    # exports
+    export EDITOR=vim
     #export CLICOLOR=1
     #export TERM=rxvt-unicode-256color
     #export HISTCONTROL=ignoreboth
@@ -229,7 +234,7 @@ function load_prompt () {
 }
 
 function show_battery() {
-    acpi | awk '{print $4}' | sed -e 's/,//'
+    acpi | awk '{print $4}' | paste -sd "-" - | sed -e 's/,//'
 }
 
 function show_git_branch() {
@@ -238,5 +243,20 @@ function show_git_branch() {
 #=========================================================
 # Prompts
 #=========================================================
-    PS1='[\u@\h \W][$(show_battery)]\$ '
+PS1='[\u@\h \W]-[$(show_battery)]\$ '
     #load_prompt
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/dynamix/.anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/dynamix/.anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/dynamix/.anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/dynamix/.anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
