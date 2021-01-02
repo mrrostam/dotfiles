@@ -18,6 +18,10 @@ xorg:
 	@echo "********** xorg setup **********"
 	stow -S x11 -t ${HOME}
 
+alacritty: 
+	@echo "********** alacritty setup **********"
+	stow -S alacritty -t ${HOME}/.config
+
 wallpapers: 
 	@echo "********** wallpapers setup **********"
 	stow -S wallpapers -t ${HOME}/Pictures
@@ -37,4 +41,4 @@ arch:
 clean:
 	stow -D vim -t ${HOME}
 
-.PHONY: vim bash xorg xfce urxvt wallpapers
+.PHONY: vim bash xorg xfce urxvt wallpapers alacritty
