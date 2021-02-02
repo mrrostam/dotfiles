@@ -30,6 +30,7 @@ set secure
     Plug 'junegunn/fzf'
     Plug 'scrooloose/nerdtree'
     Plug 'scrooloose/syntastic'
+    Plug 'tpope/vim-commentary'
     Plug 'vim-scripts/c.vim'
 
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
