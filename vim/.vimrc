@@ -29,8 +29,16 @@ set secure
     Plug 'hdima/python-syntax'
     Plug 'junegunn/fzf'
     Plug 'scrooloose/nerdtree'
+    Plug 'scrooloose/syntastic'
     Plug 'tpope/vim-commentary'
     Plug 'vim-scripts/c.vim'
+
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+    Plug 'vim-scripts/loremipsum'
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+    Plug 'godlygeek/tabular'
+    Plug 'plasticboy/vim-markdown'
     " ==================== themes ===================="
     Plug 'arcticicestudio/nord-vim'
     Plug 'chriskempson/base16-vim'
@@ -106,7 +114,7 @@ set secure
 "*****************************************************************************
 "" Mappings
 "*****************************************************************************
-
+    nnoremap <silent> <C-f> :Files<CR>
 "*****************************************************************************
 "" Custom configs
 "*****************************************************************************
