@@ -32,7 +32,8 @@ wallpapers:
 
 fonts:
 	@echo "********** fonts setup **********"
-	stow -S fonts -t ${HOME}
+	mkdir -p ${HOME}/.local/share/fonts/
+	stow -S fonts -t ${HOME}/.local/share/fonts
 
 # urxvt: 
 # 	@echo "********** urxvt setup **********"
@@ -53,4 +54,4 @@ fonts:
 
 
 
-.PHONY: vim bash xorg xfce urxvt wallpapers alacritty
+.PHONY: vim bash wallpapers fonts 
