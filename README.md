@@ -1,7 +1,11 @@
-my dotfiles, settings, and necessary files. I am using stow to manage and set up them on a new, clean system.
+My dotfiles, settings, and necessary files. 
+I am using stow to manage and set up my dotfiles on a new, clean system.
 
 # Setup
+- Clone the repository first.
 
 ## Arch linux
-- Clone the repo
-- make arch
+- `make arch`
+
+## Ubuntu linux
+- `make ubuntu`
