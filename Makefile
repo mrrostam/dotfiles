@@ -14,6 +14,7 @@ arch:
 	sudo pacman -S vim neovim stow alacritty tmux
 
 clean:
+	stow -D bash -t ${HOME}
 	stow -D vim -t ${HOME}
 
 bash:
@@ -23,6 +24,15 @@ bash:
 vim: 
 	@echo "********** Vim setup **********"
 	stow -S vim -t ${HOME}
+
+wallpapers: 
+	@echo "********** wallpapers setup **********"
+	mkdir -p ${HOME}/Pictures/my_pic
+	stow -S wallpapers -t ${HOME}/Pictures/my_pic
+
+fonts:
+	@echo "********** fonts setup **********"
+	stow -S fonts -t ${HOME}
 
 # urxvt: 
 # 	@echo "********** urxvt setup **********"
@@ -36,17 +46,11 @@ vim:
 # 	@echo "********** alacritty setup **********"
 # 	stow -S alacritty -t ${HOME}/.config
 
-# wallpapers: 
-# 	@echo "********** wallpapers setup **********"
-# 	stow -S wallpapers -t ${HOME}/Pictures
 
 # xfce:
 # 	@echo "********** xfce setup **********"
 # 	stow -S xfce -t ${HOME}/.config
 
-fonts:
-	@echo "********** fonts setup **********"
-	stow -S fonts -t ${HOME}
 
 
 .PHONY: vim bash xorg xfce urxvt wallpapers alacritty
