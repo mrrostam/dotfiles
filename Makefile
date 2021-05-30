@@ -35,6 +35,10 @@ fonts:
 	mkdir -p ${HOME}/.local/share/fonts/
 	stow -S fonts -t ${HOME}/.local/share/fonts
 
+alacritty: 
+	@echo "********** alacritty setup **********"
+	stow -S alacritty -t ${HOME}/.config
+
 # urxvt: 
 # 	@echo "********** urxvt setup **********"
 # 	stow -S urxvt -t ${HOME}
@@ -43,9 +47,6 @@ fonts:
 # 	@echo "********** xorg setup **********"
 # 	stow -S x11 -t ${HOME}
 
-# alacritty: 
-# 	@echo "********** alacritty setup **********"
-# 	stow -S alacritty -t ${HOME}/.config
 
 
 # xfce:
@@ -54,4 +55,4 @@ fonts:
 
 
 
-.PHONY: vim bash wallpapers fonts 
+.PHONY: vim bash wallpapers fonts alacritty

@@ -118,6 +118,9 @@ set secure
         set termguicolors
       endif
     endif
+    if &term == "alacritty"        
+          let &term = "xterm-256color"
+    endif
     " ==================== folding ==================== "
     set foldenable                      " enable folding
     set foldlevelstart=10               " open most folds by default
