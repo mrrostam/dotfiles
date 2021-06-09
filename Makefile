@@ -7,12 +7,20 @@ ubuntu:
 	sudo apt update
 	sudo apt upgrade
 	sudo apt install vim neovim stow alacritty tmux
-	sudo pacman -S vim neovim stow alacritty tmux
 
 arch:
 	@echo "********** init arch system *****"
 	sudo pacman -Syu
-	sudo pacman -S vim neovim stow alacritty tmux ctags
+	sudo pacman -S vim neovim stow alacritty tmux ctags ccls
+
+arch:
+	@echo "********** init arch system *****"
+	sudo dnf update
+	sudo dnf install vim neovim stow alacritty tmux
+
+clean:
+	stow -D bash -t ${HOME}
+	stow -D vim -t ${HOME}
 
 bash:
 	@echo "********** Bash setup *********"
