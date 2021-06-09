@@ -8,18 +8,19 @@ ubuntu:
 	sudo apt upgrade
 	sudo apt install vim neovim stow alacritty tmux
 	sudo pacman -S vim neovim stow alacritty tmux
+
 arch:
 	@echo "********** init arch system *****"
 	sudo pacman -Syu
-	sudo pacman -S vim neovim stow alacritty tmux
-
-clean:
-	stow -D bash -t ${HOME}
-	stow -D vim -t ${HOME}
+	sudo pacman -S vim neovim stow alacritty tmux ctags
 
 bash:
 	@echo "********** Bash setup *********"
 	stow -S bash -t ${HOME}
+
+kde:
+	@echo "		KDE setup"
+	stow -S kde -t ${HOME}/.config
 
 vim: 
 	@echo "********** Vim setup **********"
@@ -39,6 +40,15 @@ alacritty:
 	@echo "********** alacritty setup **********"
 	stow -S alacritty -t ${HOME}/.config
 
+zsh:
+	@echo "		zsh setup"
+	stow -S zsh -t ${HOME}
+
+clean:
+	stow -D bash -t ${HOME}
+	stow -D vim -t ${HOME}
+	stow -D alacritty -t ${HOME}/.config
+
 # urxvt: 
 # 	@echo "********** urxvt setup **********"
 # 	stow -S urxvt -t ${HOME}
@@ -47,12 +57,8 @@ alacritty:
 # 	@echo "********** xorg setup **********"
 # 	stow -S x11 -t ${HOME}
 
-
-
 # xfce:
 # 	@echo "********** xfce setup **********"
 # 	stow -S xfce -t ${HOME}/.config
 
-
-
-.PHONY: vim bash wallpapers fonts alacritty
+.PHONY: vim bash wallpapers fonts alacritty kde zsh

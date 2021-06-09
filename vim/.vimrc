@@ -26,15 +26,20 @@ set secure
 
     call plug#begin('~/.vim/plugged')
     " ==================== packages ===================="
+        Plug 'sheerun/vim-polyglot'
     " ========== Python =========="
         Plug 'vim-scripts/indentpython.vim'
         Plug 'hdima/python-syntax'
     " ========== C =========="
         Plug 'vim-scripts/c.vim'
+        Plug 'neoclide/coc.nvim', {'branch': 'release'}
+        Plug 'preservim/tagbar'
     " ========== Markdown =========="
         Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
         Plug 'godlygeek/tabular'
         Plug 'plasticboy/vim-markdown'
+    " ========== Latex =========="
+        Plug 'lervag/vimtex'
     " ========== File finder =========="
         Plug 'scrooloose/nerdtree'
         Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -45,6 +50,7 @@ set secure
         Plug 'tpope/vim-commentary'
         Plug 'scrooloose/syntastic'
         Plug 'vim-scripts/loremipsum'
+        Plug 'jiangmiao/auto-pairs'
     " ==================== themes ===================="
         Plug 'arcticicestudio/nord-vim'
         Plug 'chriskempson/base16-vim'
@@ -61,7 +67,7 @@ set secure
     set clipboard=unnamedplus       " using the clipboard as the default register
     set hidden                      " hide buffers
     set mouse=a                     " automatically enable mouse usage
-    set history=1000                " Store a ton of history (defaul is 20)
+    set history=1000                " Store a ton of history (default is 20)
     set path+=**                    " vim kind-of fuzzy finder
     " set spell                     " spell checking on
     set spelllang=en_us,en_ca
