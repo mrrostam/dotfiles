@@ -13,8 +13,8 @@ arch:
 	sudo pacman -Syu
 	sudo pacman -S vim neovim stow alacritty tmux
 
-arch:
-	@echo "********** init arch system *****"
+fedora:
+	@echo "********** init fedora system *****"
 	sudo dnf update
 	sudo dnf install vim neovim stow alacritty tmux
 
