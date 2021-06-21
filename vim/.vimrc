@@ -31,6 +31,7 @@ set secure
         Plug 'hdima/python-syntax'
     " ========== C =========="
         Plug 'vim-scripts/c.vim'
+        Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " ========== Markdown =========="
         Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
         Plug 'godlygeek/tabular'
