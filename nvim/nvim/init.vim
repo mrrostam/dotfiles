@@ -26,34 +26,34 @@ set secure
 
     call plug#begin('~/.vim/plugged')
     " ==================== packages ===================="
-        Plug 'sheerun/vim-polyglot'
-    " ========== Python =========="
-        Plug 'vim-scripts/indentpython.vim'
-        Plug 'hdima/python-syntax'
-    " ========== C =========="
-        Plug 'vim-scripts/c.vim'
-        Plug 'neoclide/coc.nvim', {'branch': 'release'}
-        Plug 'preservim/tagbar'
-    " ========== ASM =========="
-        Plug 'helino/vim-nasm'
-    " ========== Markdown =========="
-        Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-        Plug 'godlygeek/tabular'
-        Plug 'plasticboy/vim-markdown'
-    " ========== Latex =========="
-        Plug 'lervag/vimtex'
-    " ========== File finder =========="
-        Plug 'scrooloose/nerdtree'
-        Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-        Plug 'junegunn/fzf.vim'
-    " ========== Misc. =========="
-        Plug 'scrooloose/syntastic'
-        Plug 'sheerun/vim-polyglot'
+        " Plug 'sheerun/vim-polyglot'
+    " " ========== Python =========="
+        " Plug 'vim-scripts/indentpython.vim'
+        " Plug 'hdima/python-syntax'
+    " " ========== C =========="
+        " Plug 'vim-scripts/c.vim'
+        " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+        " Plug 'preservim/tagbar'
+    " " ========== ASM =========="
+        " Plug 'helino/vim-nasm'
+    " " ========== Markdown =========="
+        " Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+        " Plug 'godlygeek/tabular'
+        " Plug 'plasticboy/vim-markdown'
+    " " ========== Latex =========="
+        " Plug 'lervag/vimtex'
+    " " ========== File finder =========="
+        " Plug 'scrooloose/nerdtree'
+        " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+        " Plug 'junegunn/fzf.vim'
+    " " ========== Misc. =========="
+        " Plug 'scrooloose/syntastic'
+        " Plug 'sheerun/vim-polyglot'
         Plug 'tpope/vim-commentary'
-        Plug 'scrooloose/syntastic'
-        Plug 'vim-scripts/loremipsum'
-        Plug 'jiangmiao/auto-pairs'
-    " ==================== themes ===================="
+        " Plug 'scrooloose/syntastic'
+        " Plug 'vim-scripts/loremipsum'
+        " Plug 'jiangmiao/auto-pairs'
+    " " ==================== themes ===================="
         Plug 'arcticicestudio/nord-vim'
         Plug 'chriskempson/base16-vim'
         Plug 'dracula/vim', { 'as': 'dracula' }
@@ -70,36 +70,36 @@ set secure
     set hidden                      " hide buffers
     set mouse=a                     " automatically enable mouse usage
     set history=1000                " Store a ton of history (default is 20)
-    set path+=**                    " vim kind-of fuzzy finder
+    "set path+=**                    " vim kind-of fuzzy finder
     " set spell                     " spell checking on
     set spelllang=en_us,en_ca
     set spellfile=~/.vim/spell/en.utf-8.add
     set thesaurus+=~/.vim/thesaurus/mthesaur.txt
-    " ==================== Encoding ==================== "
+    "" ==================== Encoding ==================== "
     set encoding=utf-8              " specifies encoding that Vim uses internally
     set fileencoding=utf-8          " specifies encoding that Vim uses for files
     set fileencodings=utf-8
     set ttyfast
-    " ==================== Tabs ==================== "
+    "" ==================== Tabs ==================== "
     set shiftwidth=4                " use indents of 4 spaces
     set expandtab                   " tabs are spaces, not tabs
     set tabstop=4                   " an indentation every four columns
     set softtabstop=4               " let backspace delete indent
-    " ==================== Searching ==================== "
+    "" ==================== Searching ==================== "
     set hlsearch                    " highlight all search matches
     set incsearch                   " find as you type search
     set ignorecase                  " case insensitive search
     set smartcase                   " case sensitive when uc present
     set wildmenu                    " show list instead of just completing
-    set nowrap                      " wrap long lines
-    "set wrap linebreak nolist
-    set autoindent                  " indent at the same level of the previous line
-    set showcmd                     " show command in bottom bar
-    set breakindent                 " enable indentation
-    set breakindentopt=shift:2,min:40,sbr
-    set showbreak=>>                " append '>>' to indent
-    " ==================== session management ==================== "
-    set tags=tags;/
+    "set nowrap                      " wrap long lines
+    ""set wrap linebreak nolist
+    "set autoindent                  " indent at the same level of the previous line
+    "set showcmd                     " show command in bottom bar
+    "set breakindent                 " enable indentation
+    "set breakindentopt=shift:2,min:40,sbr
+    "set showbreak=>>                " append '>>' to indent
+    "" ==================== session management ==================== "
+    "set tags=tags;/
 "*****************************************************************************
 "" Visual Settings
 "*****************************************************************************
@@ -107,7 +107,7 @@ set secure
     set cursorline                      " highlight current line
     " =================== theme ==================== " 
     " colorscheme base16-tomorrow-night
-    " set termguicolors
+    set termguicolors
     colorscheme onedark
     set background=dark
     set t_Co=256                        " for tmux
@@ -130,9 +130,9 @@ set secure
           let &term = "xterm-256color"
     endif
     " ==================== folding ==================== "
-    set foldenable                      " enable folding
-    set foldlevelstart=10               " open most folds by default
-    set foldmethod=indent               " fold based on indent level
+    " set foldenable                      " enable folding
+    " set foldlevelstart=10               " open most folds by default
+    " set foldmethod=indent               " fold based on indent level
 "*****************************************************************************
 "" Abbreviations
 "*****************************************************************************
