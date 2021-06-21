@@ -34,6 +34,8 @@ set secure
         Plug 'vim-scripts/c.vim'
         Plug 'neoclide/coc.nvim', {'branch': 'release'}
         Plug 'preservim/tagbar'
+    " ========== ASM =========="
+        Plug 'helino/vim-nasm'
     " ========== Markdown =========="
         Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
         Plug 'godlygeek/tabular'

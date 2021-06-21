@@ -13,14 +13,10 @@ arch:
 	sudo pacman -Syu
 	sudo pacman -S vim neovim stow alacritty tmux ctags ccls
 
-arch:
-	@echo "********** init arch system *****"
+fedora:
+	@echo "********** init fedora system *****"
 	sudo dnf update
 	sudo dnf install vim neovim stow alacritty tmux
-
-clean:
-	stow -D bash -t ${HOME}
-	stow -D vim -t ${HOME}
 
 bash:
 	@echo "********** Bash setup *********"
@@ -33,6 +29,10 @@ kde:
 vim: 
 	@echo "********** Vim setup **********"
 	stow -S vim -t ${HOME}
+
+nvim: 
+	@echo "********** Neovim setup **********"
+	stow -S nvim -t ${HOME}/.config
 
 wallpapers: 
 	@echo "********** wallpapers setup **********"
@@ -69,4 +69,4 @@ clean:
 # 	@echo "********** xfce setup **********"
 # 	stow -S xfce -t ${HOME}/.config
 
-.PHONY: vim bash wallpapers fonts alacritty kde zsh
+.PHONY: vim nvim bash wallpapers fonts alacritty kde zsh
