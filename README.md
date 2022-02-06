@@ -1,2 +1,3 @@
-# dotfiles
- My personal dotfiles/configuration
+# Pouya's dotfiles
+
+## Vim setup
