@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/dynamix'
 let g:netrw_dirhist_6='/home/dynamix/Documents/dotfiles/.git'
 let g:netrw_dirhist_5='/home/dynamix/.dotfiles/vim'
 let g:netrw_dirhist_4='/home/dynamix/.matlab/R2021b'

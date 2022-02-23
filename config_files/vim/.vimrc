@@ -36,7 +36,7 @@
     set exrc                " This option forces Vim to source .vimrc file if it present in working directory
     set secure
 
-    let g:mapleader = ' '
+    let g:mapleader = ","
 
     set wildmenu            " show list instead of just completing
 
@@ -53,8 +53,11 @@
     call plug#begin()
 
     " ------------------------------
+        Plug 'tpope/vim-obsession'
+	Plug 'tpope/vim-commentary'
     " markdown----------------------
     " latex-------------------------
+        Plug 'lervag/vimtex'
     " themes------------------------
         Plug 'arcticicestudio/nord-vim'
         Plug 'chriskempson/base16-vim'
@@ -129,3 +132,8 @@
 " ****************************************
 "  Helper functions
 " ****************************************
+
+" ****************************************
+"  Pluging configs
+" ****************************************
+    let g:vimtex_view_method = 'zathura'

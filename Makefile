@@ -28,3 +28,7 @@ alacritty:
 tmux:
 	@echo "********** tmux setup **********"
 	stow -d config_files -t ~ -S tmux2
+
+kitty:
+	@echo "********** kitty setup **********"
+	stow -d config_files -t ~/.config -S kitty
