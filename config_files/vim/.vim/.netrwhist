@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/dynamix'
+let g:netrw_dirhist_9='/home/dynamix/Documents/dotfiles/config_files/emacs/emacs'
+let g:netrw_dirhist_8='/home/dynamix/Documents/dotfiles/config_files/emacs'
 let g:netrw_dirhist_7='/home/dynamix'
 let g:netrw_dirhist_6='/home/dynamix/Documents/dotfiles/.git'
 let g:netrw_dirhist_5='/home/dynamix/.dotfiles/vim'

@@ -32,3 +32,11 @@ tmux:
 kitty:
 	@echo "********** kitty setup **********"
 	stow -d config_files -t ~/.config -S kitty
+
+emacs:
+	@echo "********** emacs setup **********"
+	stow -d config_files -t ~/.config -S emacs
+
+zsh:
+	@echo "********** zsh setup **********"
+	stow -d config_files -t ~/.config -S zsh
