@@ -1,12 +1,23 @@
 .PHONY: arch fedora ubuntu vim touchegg wallpapers alacritty
 
-arch: vim touchegg wallpapers alacritty
+arch: 
 	mkdir -p ~/.config
+	sudo pacman -S --needed \
+		neovim \
+		vim \
+		stow \
+		fzf	\
+		ripgrep \
+		alacritty \
+		kitty \
+		tmux \
+		emacs \
+		zsh
 
 fonts:
 	@echo "********** fonts setup **********"
 	mkdir -p ${HOME}/.local/share/fonts/
-	stow -S fonts -t ${HOME}/.local/share/fonts
+	stow -d config_files -S fonts -t ${HOME}/.local/share/fonts
 
 vim:
 	@echo "********** vim setup **********"

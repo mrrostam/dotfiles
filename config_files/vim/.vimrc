@@ -7,14 +7,13 @@
     " Filename:     .vimrc
     " Github:       https://github.com/mrrostam/dotfiles
     " Maintainer:   Pouya Rostam (Dynamix)
-    " Modified:     Sun Feb 13 11:26:45 AM PST 2022
+    " Modified:     Mon Mar 21 05:27:34 AM PDT 2022
 " ==================================================
 
 " Sections:
 "    -> General
 "    -> Vim-PLug core
 "    -> Basics
-"    -> VIM user interface
 "    -> Colors and Fonts
 "    -> Files and backups
 "    -> Text, tab and indent related
@@ -36,7 +35,6 @@
     set exrc                " This option forces Vim to source .vimrc file if it present in working directory
     set secure
 
-    let g:mapleader = ","
 
     set wildmenu            " show list instead of just completing
 
@@ -54,10 +52,10 @@
 
     " ------------------------------
         Plug 'tpope/vim-obsession'
-	Plug 'tpope/vim-commentary'
+        Plug 'tpope/vim-commentary'
     " markdown----------------------
     " latex-------------------------
-        Plug 'lervag/vimtex'
+        source ~/.vim/plugged/vimtex.vim
     " themes------------------------
         Plug 'arcticicestudio/nord-vim'
         Plug 'chriskempson/base16-vim'
@@ -78,10 +76,7 @@
     set mouse=a                     " automatically enable mouse usage
     set history=1000                " Store a ton of history (default is 20)
     set path+=**                    " vim kind-of fuzzy finder
-
-" ****************************************
-"  VIM user interface
-" ****************************************
+    set clipboard=unnameplus
 
 " ****************************************
 "  Colors and Fonts
@@ -99,12 +94,19 @@
 "  Text, tab and indent related
 " ****************************************
 
+    set expandtab
+    set shiftwidth=4
+    set tabstop=4
+    set list
+    set listchars=tab:▶\ ,trail:.
+
 " ****************************************
 "  Visual mode related
 " ****************************************
 
     set cursorline                      " highlight current line
     set number relativenumber           " Show line numbers
+    set scrolloff=8
     set ttyfast
 
 " ****************************************
@@ -115,11 +117,15 @@
 "  Status line
 " ****************************************
 
-    set showcmd                     " show command in bottom bar
+    set showcmd                         " show command in bottom bar
 
 " ****************************************
 "  Editing mappings
 " ****************************************
+
+    let mapleader = "\<space>"
+    nmap <leader>ve :edit $MYVIMRC<cr>
+    map gf :edit <cfile><cr>
 
 " ****************************************
 "  Spell checking
@@ -132,8 +138,3 @@
 " ****************************************
 "  Helper functions
 " ****************************************
-
-" ****************************************
-"  Pluging configs
-" ****************************************
-    let g:vimtex_view_method = 'zathura'
