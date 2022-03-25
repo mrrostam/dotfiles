@@ -1,23 +1,27 @@
 .PHONY: arch fedora ubuntu vim touchegg wallpapers alacritty
 
-arch: 
+arch:
 	mkdir -p ~/.config
 	sudo pacman -S --needed \
-		neovim \
-		vim \
-		stow \
-		fzf	\
-		ripgrep \
 		alacritty \
-		kitty \
-		tmux \
+		base-devel \
+		curl \
 		emacs \
+		fzf \
+		git \
+		kitty \
+		neovim \
+		ripgrep \
+		stow \
+		tmux \
+		vim \
 		zsh
+	mkdir -p .aur && cd .aur && git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si
 
 fonts:
 	@echo "********** fonts setup **********"
-	mkdir -p ${HOME}/.local/share/fonts/
-	stow -d config_files -S fonts -t ${HOME}/.local/share/fonts
+	mkdir -p ~/.local/share/fonts/
+	stow -d config_files -S fonts -t ~/.local/share/fonts
 
 vim:
 	@echo "********** vim setup **********"
@@ -29,8 +33,8 @@ touchegg:
 
 wallpapers:
 	@echo "********** wallpapers setup **********"
-	mkdir -p ${HOME}/Pictures/wallpapers
-	stow -d config_files -t ${HOME}/Pictures/wallpapers -S wallpapers
+	mkdir -p ~/Pictures/wallpapers
+	stow -d config_files -t ~/Pictures/wallpapers -S wallpapers
 
 alacritty:
 	@echo "********** alacritty setup **********"
@@ -50,4 +54,8 @@ emacs:
 
 zsh:
 	@echo "********** zsh setup **********"
-	stow -d config_files -t ~/.config -S zsh
+	stow -d config_files -t ~ -S zsh
+
+bash:
+	@echo "********** bash setup **********"
+	stow -d config_files -t ~/.config -S bash

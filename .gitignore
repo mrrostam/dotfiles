@@ -1,2 +1,3 @@
 config_files/vim/.vim/plugged
 config_files/tmux2/.tmux/plugins
+config_files/vim/.vim/.netrwhist
