@@ -48,6 +48,10 @@ kitty:
 	@echo "********** kitty setup **********"
 	stow -d config_files -t ~/.config -S kitty
 
+neovim:
+	@echo "********** neovim setup **********"
+	stow -d config_files -t ~/.config -S neovim
+
 emacs:
 	@echo "********** emacs setup **********"
 	stow -d config_files -t ~/.config -S emacs
@@ -55,6 +59,7 @@ emacs:
 zsh:
 	@echo "********** zsh setup **********"
 	stow -d config_files -t ~ -S zsh
+	antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 
 bash:
 	@echo "********** bash setup **********"
