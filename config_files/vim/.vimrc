@@ -97,6 +97,8 @@
     set expandtab
     set shiftwidth=4
     set tabstop=4
+    set softtabstop=4
+    set smartindent
     set list
     set listchars=tab:▶\ ,trail:.
 
@@ -104,26 +106,34 @@
 "  Visual mode related
 " ****************************************
 
-    set cursorline                      " highlight current line
-    set number relativenumber           " Show line numbers
+    set cursorline
+    set number relativenumber
     set scrolloff=8
     set ttyfast
 
 " ****************************************
+"  Search config
+" ****************************************
+    set ignorecase
+    set smartcase
+
+" ****************************************
 "  Moving around, tabs and buffers
 " ****************************************
+    set splitright
+    set splitbelow
 
 " ****************************************
 "  Status line
 " ****************************************
 
-    set showcmd                         " show command in bottom bar
+    set showcmd
 
 " ****************************************
 "  Editing mappings
 " ****************************************
-
-    let mapleader = "\<space>"
+    nnoremap <space> <NOP>
+    let mapleader = " "
     nmap <leader>ve :edit $MYVIMRC<cr>
     map gf :edit <cfile><cr>
 

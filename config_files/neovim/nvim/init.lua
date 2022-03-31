@@ -13,7 +13,7 @@
 --]]
 
 -- Import Lua modules
-require('core/settings')
+require('core.settings')
 -- require('core/keymaps')
 -- require('core/statusline')
 -- require('packer_init')
