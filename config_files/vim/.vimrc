@@ -7,23 +7,8 @@
     " Filename:     .vimrc
     " Github:       https://github.com/mrrostam/dotfiles
     " Maintainer:   Pouya Rostam (Dynamix)
-    " Modified:     Mon Mar 21 05:27:34 AM PDT 2022
+    " Modified:     Sun Apr  3 09:38:15 AM PDT 2022
 " ==================================================
-
-" Sections:
-"    -> General
-"    -> Vim-PLug core
-"    -> Basics
-"    -> Colors and Fonts
-"    -> Files and backups
-"    -> Text, tab and indent related
-"    -> Visual mode related
-"    -> Moving around, tabs and buffers
-"    -> Status line
-"    -> Editing mappings
-"    -> Spell checking
-"    -> Misc
-"    -> Helper functions
 
 " ****************************************
 "  General
@@ -34,7 +19,6 @@
 
     set exrc                " This option forces Vim to source .vimrc file if it present in working directory
     set secure
-
 
     set wildmenu            " show list instead of just completing
 
@@ -50,8 +34,8 @@
 
     call plug#begin()
 
-    " ------------------------------
-        Plug 'tpope/vim-obsession'
+    " general-----------------------
+        source ~/.vim/plugged/vim-obsession.vim
         Plug 'tpope/vim-commentary'
     " markdown----------------------
     " latex-------------------------
@@ -88,7 +72,11 @@
 "  Files and backups
 " ****************************************
 
+augroup filetype_latex
+    autocmd!
     autocmd FileType tex,latex,markdown setlocal spell
+    autocmd FileType tex,latex,markdown setlocal wrap
+augroup END
 
 " ****************************************
 "  Text, tab and indent related
@@ -110,6 +98,7 @@
     set number relativenumber
     set scrolloff=8
     set ttyfast
+    set nowrap
 
 " ****************************************
 "  Search config
@@ -134,8 +123,10 @@
 " ****************************************
     nnoremap <space> <NOP>
     let mapleader = " "
-    nmap <leader>ve :edit $MYVIMRC<cr>
-    map gf :edit <cfile><cr>
+    nnoremap <leader>ev :split $MYVIMRC<cr>
+    nnoremap <leader>sv :source $MYVIMRC<cr>
+    inoremap jk <esc>
+    nnoremap gf :edit <cfile><cr>
 
 " ****************************************
 "  Spell checking
@@ -145,6 +136,10 @@
     set spellfile=~/.vim/spell/en.utf-8.add
     set thesaurus+=~/.vim/thesaurus/mthesaur.txt
 
+" ****************************************
+"  Abbreviations
+" ****************************************
+    iabbrev @@  pooya.rostam@gmail.com
 " ****************************************
 "  Helper functions
 " ****************************************

@@ -1,3 +1,6 @@
-config_files/vim/.vim/plugged
+config_files/vim/.vim/plugged/**
+!config_files/vim/.vim/plugged/*.vim
+!config_files/vim/.vim/plugged/vim-sessions
 config_files/tmux2/.tmux/plugins
 config_files/vim/.vim/.netrwhist
+config_files/vim/.vim/plugged/onedark.vim
