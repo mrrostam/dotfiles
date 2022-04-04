@@ -22,6 +22,9 @@
 
     set wildmenu            " show list instead of just completing
 
+    nnoremap <space> <NOP>
+    let mapleader = " "
+
 " ****************************************
 "  Vim-PLug core
 " ****************************************
@@ -36,7 +39,7 @@
 
     " general-----------------------
         source ~/.vim/plugged/vim-obsession.vim
-        Plug 'tpope/vim-commentary'
+        source ~/.vim/plugged/vim-commentary.vim
     " markdown----------------------
     " latex-------------------------
         source ~/.vim/plugged/vimtex.vim
@@ -87,28 +90,30 @@ augroup END
     set tabstop=4
     set softtabstop=4
     set smartindent
-    set list
-    set listchars=tab:▶\ ,trail:.
 
 " ****************************************
 "  Visual mode related
 " ****************************************
 
     set cursorline
+    set list
+    set listchars=tab:▶\ ,trail:.
+    set nowrap
     set number relativenumber
     set scrolloff=8
     set ttyfast
-    set nowrap
 
 " ****************************************
 "  Search config
 " ****************************************
+
     set ignorecase
     set smartcase
 
 " ****************************************
 "  Moving around, tabs and buffers
 " ****************************************
+
     set splitright
     set splitbelow
 
@@ -121,8 +126,7 @@ augroup END
 " ****************************************
 "  Editing mappings
 " ****************************************
-    nnoremap <space> <NOP>
-    let mapleader = " "
+
     nnoremap <leader>ev :split $MYVIMRC<cr>
     nnoremap <leader>sv :source $MYVIMRC<cr>
     inoremap jk <esc>
@@ -139,7 +143,9 @@ augroup END
 " ****************************************
 "  Abbreviations
 " ****************************************
+
     iabbrev @@  pooya.rostam@gmail.com
+
 " ****************************************
 "  Helper functions
 " ****************************************
