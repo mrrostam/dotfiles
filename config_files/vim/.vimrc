@@ -25,6 +25,10 @@
     nnoremap <space> <NOP>
     let mapleader = " "
 
+    if !has('gui_running') && &term =~ '^\%(screen\|tmux\)'
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
 " ****************************************
 "  Vim-PLug core
 " ****************************************
@@ -38,8 +42,9 @@
     call plug#begin()
 
     " general-----------------------
-        source ~/.vim/plugged/vim-obsession.vim
+        source ~/.vim/plugged/vim-airline.vim
         source ~/.vim/plugged/vim-commentary.vim
+        source ~/.vim/plugged/vim-obsession.vim
     " markdown----------------------
     " latex-------------------------
         source ~/.vim/plugged/vimtex.vim
@@ -69,6 +74,7 @@
 "  Colors and Fonts
 " ****************************************
 
+    set termguicolors
     colorscheme onedark
 
 " ****************************************
@@ -107,7 +113,10 @@ augroup END
 "  Search config
 " ****************************************
 
+    set hlsearch
     set ignorecase
+    set ignorecase
+    set incsearch
     set smartcase
 
 " ****************************************

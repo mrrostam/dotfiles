@@ -6,7 +6,7 @@
 --- OneDark styles: dark, darker, cool, deep, warm, warmer, light
 require('onedark').setup {
   style = 'darker',
-  colors = { fg = '#b2bbcc' }, --default: #a0a8b7
+--   colors = { fg = '#b2bbcc' }, --default: #a0a8b7
 }
 require('onedark').load()
 
@@ -18,17 +18,17 @@ local M = {}
 
 -- Theme: OneDark
 --- See: https://github.com/navarasu/onedark.nvim/blob/master/lua/onedark/colors.lua
-M.onedark = {
-  bg = '#282c34',
-  fg = '#abb2bf',
-  pink = '#c678dd',
-  green = '#98c379',
-  cyan = '#56b6c2',
-  yellow = '#e5c07b',
-  orange = '#d19a66',
-  purple = '#8a3fa0',
-  red = '#e86671',
-}
+-- M.onedark = {
+--  bg = '#282c34',
+--  fg = '#abb2bf',
+--  pink = '#c678dd',
+--  green = '#98c379',
+--  cyan = '#56b6c2',
+--  yellow = '#e5c07b',
+--  orange = '#d19a66',
+--  purple = '#8a3fa0',
+--  red = '#e86671',
+--}
 
 -- Theme: Monokai (classic)
 --- See: https://github.com/tanvirtin/monokai.nvim/blob/master/lua/monokai.lua

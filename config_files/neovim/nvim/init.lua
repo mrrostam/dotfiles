@@ -14,9 +14,10 @@
 
 -- Import Lua modules
 require('core.settings')
+require('core.colors')
 -- require('core/keymaps')
 -- require('core/statusline')
--- require('packer_init')
+require('packer_init')
 -- require('plugins/nvim-tree')
 -- require('plugins/indent-blankline')
 -- require('plugins/vista')
