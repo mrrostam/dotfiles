@@ -36,3 +36,8 @@ alias nuke="git clean -df && git reset --hard"
 # alias stash="git stash -u"
 # alias unstage="git restore --staged ."
 # alias wip="commit wip"
+
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+# export FZF_TMUX=1
+# export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"

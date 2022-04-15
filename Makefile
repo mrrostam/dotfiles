@@ -40,6 +40,10 @@ alacritty:
 	@echo "********** alacritty setup **********"
 	stow -d config_files -t ~/.config/ -S alacritty
 
+ranger:
+	@echo "********** ranger setup **********"
+	stow -d config_files -t ~/.config/ -S ranger
+
 tmux:
 	@echo "********** tmux setup **********"
 	stow -d config_files -t ~ -S tmux2

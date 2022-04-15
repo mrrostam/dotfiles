@@ -48,6 +48,7 @@ source ~/.vim/plugged/vim-commentary.vim
 source ~/.vim/plugged/vim-obsession.vim
 " language-support--------------
 source ~/.vim/plugged/vimtex.vim
+source ~/.vim/plugged/fzfvim.vim
 " themes------------------------
 Plug 'arcticicestudio/nord-vim'
 Plug 'chriskempson/base16-vim'
