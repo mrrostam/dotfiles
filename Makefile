@@ -18,10 +18,42 @@ arch:
 		zsh
 	mkdir -p .aur && cd .aur && git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si
 
+ubuntu:
+	mkdir -p ~/.config
+	sudo apt install -y \
+		curl \
+		emacs \
+		fzf \
+		git \
+		kitty \
+		neovim \
+		ripgrep \
+		stow \
+		tmux \
+		vim \
+		zsh
+
+fedora:
+	mkdir -p ~/.config
+	sudo dnf install -y \
+		base-devel \
+		curl \
+		emacs \
+		fzf \
+		git \
+		kitty \
+		neovim \
+		ripgrep \
+		stow \
+		tmux \
+		vim \
+		zsh
+
 fonts:
 	@echo "********** fonts setup **********"
 	mkdir -p ~/.local/share/fonts/
 	stow -d config_files -S fonts -t ~/.local/share/fonts
+	fc-cache -f -v
 
 vim:
 	@echo "********** vim setup **********"
