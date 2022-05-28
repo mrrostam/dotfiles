@@ -59,6 +59,10 @@ vim:
 	@echo "********** vim setup **********"
 	stow -d config_files -t ~ -S vim
 
+awesome:
+	@echo "********** awesome setup **********"
+	stow -d config_files -t ~/.config/ -S awesome
+
 touchegg:
 	@echo "********** touchegg setup **********"
 	stow -d config_files -t ~/.config/ -S touchegg
