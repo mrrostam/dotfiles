@@ -15,7 +15,13 @@ arch:
 		stow \
 		tmux \
 		vim \
-		zsh
+		zsh \
+		bat \
+		exa \
+		fd \
+		procs \
+		rmlint
+	
 	mkdir -p .aur && cd .aur && git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si
 
 ubuntu:
@@ -58,6 +64,10 @@ fonts:
 vim:
 	@echo "********** vim setup **********"
 	stow -d config_files -t ~ -S vim
+
+rofi:
+	@echo "********** rofi setup **********"
+	stow -d config_files -t ~/.config/ -S rofi
 
 awesome:
 	@echo "********** awesome setup **********"
