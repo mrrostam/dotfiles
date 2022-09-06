@@ -59,6 +59,10 @@ fonts:
 	@echo "********** fonts setup **********"
 	mkdir -p ~/.local/share/fonts/
 	stow -d config_files -S fonts -t ~/.local/share/fonts
+# pushd ~
+# git clone https://github.com/ryanoasis/nerd-fonts.git
+# cd nerd-fonts
+# ./install.sh 
 	fc-cache -f -v
 
 vim:
