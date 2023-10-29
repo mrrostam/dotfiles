@@ -72,7 +72,6 @@ set hidden                      " hide buffers
 set mouse=a                     " automatically enable mouse usage
 set history=1000                " Store a ton of history (default is 20)
 set path+=**                    " vim kind-of fuzzy finder
-set clipboard=unnameplus
 
 " ****************************************
 "  Colors and Fonts
